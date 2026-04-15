@@ -4,13 +4,13 @@ exports.handleSendMessage = async (req, res) => {
   try {
     const { name, email, company, service, message } = req.body;
 
-    console.log("Received message:", {
-      name,
-      email,
-      company,
-      service,
-      message,
-    });
+    // console.log("Received message:", {
+    //   name,
+    //   email,
+    //   company,
+    //   service,
+    //   message,
+    // });
 
     console.log("EMAIL_USER:", process.env.EMAIL_USER);
     console.log("EMAIL_PASS:", process.env.EMAIL_PASS);
