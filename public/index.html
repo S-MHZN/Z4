@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Web Developer & IT Support</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Hello, I'm a Web Developer & IT Support Specialist
+          </h1>
+          <p class="hero-subtitle">
+            Building amazing web experiences & solving tech challenges
+          </p>
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        </div>
+        <div class="hero-image">
+          <div class="profile-placeholder">
+            <img
+              src="./images/profile-photo.jpg"
+              alt="Profile Photo"
+              class="profile-photo-hero"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="hero-shape"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <div class="profile-card">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="70" r="35" fill="url(#gradientProfile)" />
+                <path
+                  d="M 30 200 Q 30 130 100 130 Q 170 130 170 200"
+                  fill="#764ba2"
+                />
+                <defs>
+                  <linearGradient
+                    id="gradientProfile"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="0%"
+                      style="stop-color: #667eea; stop-opacity: 1"
+                    />
+                    <stop
+                      offset="100%"
+                      style="stop-color: #764ba2; stop-opacity: 1"
+                    />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <p class="profile-name">Web Developer</p>
+            </div>
+          </div>
+          <div class="about-text-section">
+            <div class="about-text">
+              <p>
+                I'm a passionate web developer with strong IT support
+                background. I specialize in creating responsive, user-friendly
+                web applications and helping teams solve complex technical
+                problems.
+              </p>
+              <p>
+                With expertise in modern web technologies, I bring both frontend
+                creativity and backend pragmatism to every project. My IT
+                support experience helps me understand user needs and create
+                practical solutions.
+              </p>
+            </div>
+            <div class="about-stats">
+              <div class="stat-item">
+                <h3>5+</h3>
+                <p>Projects Completed</p>
+              </div>
+              <div class="stat-item">
+                <h3>3+</h3>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat-item">
+                <h3>10+</h3>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card skill-card-frontend">
+            <div class="skill-icon">✨</div>
+            <h3>Frontend</h3>
+            <ul class="skill-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Vue.js</li>
+            </ul>
+          </div>
+          <div class="skill-card skill-card-backend">
+            <div class="skill-icon">⚡</div>
+            <h3>Backend</h3>
+            <ul class="skill-list">
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>Python</li>
+              <li>REST APIs</li>
+            </ul>
+          </div>
+          <div class="skill-card skill-card-itsupport">
+            <div class="skill-icon">🔧</div>
+            <h3>IT Support</h3>
+            <ul class="skill-list">
+              <li>Network Setup</li>
+              <li>Troubleshooting</li>
+              <li>User Support</li>
+              <li>System Admin</li>
+            </ul>
+          </div>
+          <div class="skill-card skill-card-other">
+            <div class="skill-icon">🚀</div>
+            <h3>Other</h3>
+            <ul class="skill-list">
+              <li>Git Version Control</li>
+              <li>Database Design</li>
+              <li>Responsive Design</li>
+              <li>Problem Solving</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div
+              class="project-header"
+              style="
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              "
+            ></div>
+            <div class="project-body">
+              <h3>E-Commerce Platform</h3>
+              <p>
+                Full-stack e-commerce solution built with Node.js, Express, and
+                Vue.js with payment integration.
+              </p>
+              <div class="project-tags">
+                <span>Node.js</span>
+                <span>Vue.js</span>
+                <span>Express</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div
+              class="project-header"
+              style="
+                background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+              "
+            ></div>
+            <div class="project-body">
+              <h3>IT Support Portal</h3>
+              <p>
+                Internal support ticket system with real-time updates for
+                managing user issues and resolutions.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div
+              class="project-header"
+              style="
+                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+              "
+            ></div>
+            <div class="project-body">
+              <h3>Weather Dashboard</h3>
+              <p>
+                Real-time weather application with location-based data, built
+                with Vue.js and modern APIs.
+              </p>
+              <div class="project-tags">
+                <span>Vue.js</span>
+                <span>API</span>
+                <span>HTML/CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Senior Web Developer</h3>
+              <p class="timeline-date">2025 - Present</p>
+              <p>
+                Leading frontend development and mentoring junior developers on
+                modern web practices.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Full Stack Developer</h3>
+              <p class="timeline-date">2023 - 2024</p>
+              <p>
+                Built and maintained web applications using Node.js, Express,
+                and Vue.js frameworks.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>IT Support Specialist</h3>
+              <p class="timeline-date">2021 - 2023</p>
+              <p>
+                Provided technical support, network configuration, and system
+                administration for enterprise clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+          <div class="service-box service-box-web">
+            <div class="service-icon">🖥️</div>
+            <h3>Web Development</h3>
+            <p>
+              Custom website and web application development using modern
+              technologies and best practices.
+            </p>
+          </div>
+          <div class="service-box service-box-itsupport">
+            <div class="service-icon">🔧</div>
+            <h3>IT Support & Consultation</h3>
+            <p>
+              Technical support, network setup, troubleshooting, and IT
+              solutions for businesses.
+            </p>
+          </div>
+          <div class="service-box service-box-frontend">
+            <div class="service-icon">✨</div>
+            <h3>Frontend Development</h3>
+            <p>
+              Responsive, interactive user interfaces with HTML, CSS,
+              JavaScript, and Vue.js.
+            </p>
+          </div>
+          <div class="service-box service-box-backend">
+            <div class="service-icon">⚡</div>
+            <h3>Backend Development</h3>
+            <p>
+              Robust server-side solutions with Node.js, Express, and database
+              integration.
+            </p>
+          </div>
+          <div class="service-box service-box-admin">
+            <div class="service-icon">🛡️</div>
+            <h3>System Administration</h3>
+            <p>
+              Server management, security setup, and infrastructure
+              optimization.
+            </p>
+          </div>
+          <div class="service-box service-box-training">
+            <div class="service-icon">📚</div>
+            <h3>Technical Training</h3>
+            <p>
+              Teaching web development and IT concepts to teams and individuals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Let's Build Your Web Solution</h2>
+        <p class="contact-subtitle">
+          Ready to start your web development project? Get in touch with me
+          today!
+        </p>
+
+        <div class="contact-highlight">
+          <h3>📌 I Help With:</h3>
+          <div class="service-highlights">
+            <div class="highlight-item highlight-item-web">
+              <span class="highlight-icon">🖥️</span>
+              <span>Custom Web Applications</span>
+            </div>
+            <div class="highlight-item highlight-item-design">
+              <span class="highlight-icon">🎨</span>
+              <span>Responsive Web Design</span>
+            </div>
+            <div class="highlight-item highlight-item-fullstack">
+              <span class="highlight-icon">⚡</span>
+              <span>Full Stack Development</span>
+            </div>
+            <div class="highlight-item highlight-item-support">
+              <span class="highlight-icon">🔧</span>
+              <span>Website Maintenance & Support</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <h4>
+                <span class="contact-icon contact-icon-email">📧</span> Email
+              </h4>
+              <p>smaranmaharjan22@gmail.com</p>
+              <p class="info-note">Best for detailed inquiries</p>
+            </div>
+            <div class="contact-item">
+              <h4>
+                <span class="contact-icon contact-icon-phone">📞</span> Phone
+              </h4>
+              <p>+81 090 3824 7053</p>
+              <p class="info-note">Available for quick discussions</p>
+            </div>
+            <div class="contact-item">
+              <h4>
+                <span class="contact-icon contact-icon-location">📍</span>
+                Location
+              </h4>
+              <p>Suminoe, Osaka, Japan</p>
+              <p class="info-note">Remote work available worldwide</p>
+            </div>
+            <div class="contact-item">
+              <h4>
+                <span class="contact-icon contact-icon-time">⏰</span> Response
+                Time
+              </h4>
+              <p>Within 24 hours</p>
+              <p class="info-note">Quick turnaround guaranteed</p>
+            </div>
+          </div>
+          <form class="contact-form" action="/contact" method="POST">
+            <h3>Send Your Project Details</h3>
+            <input type="text" placeholder="Your Name" name="name" required />
+            <input
+              type="email"
+              placeholder="Your Email"
+              name="email"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Company / Project Name"
+              name="company"
+              required
+            />
+            <select
+              name="service"
+              required
+              style="
+                padding: 1rem;
+                border: none;
+                border-radius: 12px;
+                font-family: inherit;
+                font-size: 1rem;
+                background: rgba(255, 255, 255, 0.95);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+              "
+            >
+              <option value="">Select Service Type</option>
+              <option value="web-app">Web Application Development</option>
+              <option value="ecommerce">E-Commerce Platform</option>
+              <option value="website">Website Design & Development</option>
+              <option value="maintenance">Website Maintenance</option>
+              <option value="consulting">Technical Consultation</option>
+              <option value="other">Other / Custom Project</option>
+            </select>
+            <textarea
+              placeholder="Tell me about your project, timeline, and budget range..."
+              rows="5"
+              name="message"
+            ></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/smaran-maharjan-a799751a3"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/S-MHZN"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://twitter.com"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twitter
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
