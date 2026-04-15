@@ -4,13 +4,13 @@ exports.handleSendMessage = async (req, res) => {
   try {
     const { name, email, company, service, message } = req.body;
 
-    console.log("Received message:", {
-      name,
-      email,
-      company,
-      service,
-      message,
-    });
+    // console.log("Received message:", {
+    //   name,
+    //   email,
+    //   company,
+    //   service,
+    //   message,
+    // });
 
     // 1. Create transporter
     const transporter = nodemailer.createTransport({
