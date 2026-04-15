@@ -1,38 +1,21 @@
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 exports.handleSendMessage = async (req, res) => {
   try {
     const { name, email, company, service, message } = req.body;
 
-    // console.log("Received message:", {
-    //   name,
-    //   email,
-    //   company,
-    //   service,
-    //   message,
-    // });
-
-    console.log("EMAIL_USER:", process.env.EMAIL_USER);
-    console.log("EMAIL_PASS:", process.env.EMAIL_PASS);
-
-    // 1. Create transporter
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
+    console.log("Received message:", {
+      name,
+      email,
+      company,
+      service,
+      message,
     });
 
-    // 2. Email content
-    const mailOptions = {
-      from: email,
-      to: process.env.EMAIL_USER,
-      subject: `New Contact Form Message from ${name}`,
-
-      html: `
+    // Email content
+    const htmlContent = `
       <div style="font-family: Arial, sans-serif; background:#f4f4f4; padding:20px;">
         <div style="max-width:600px; margin:auto; background:#fff; padding:20px; border-radius:10px;">
 
@@ -60,11 +43,18 @@ exports.handleSendMessage = async (req, res) => {
 
         </div>
       </div>
-      `,
-    };
+    `;
 
-    // 3. Send email
-    await transporter.sendMail(mailOptions);
+    // Send email with Resend
+    const result = await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
+      to: process.env.EMAIL_USER,
+      replyTo: email,
+      subject: `New Contact Form Message from ${name}`,
+      html: htmlContent,
+    });
+
+    console.log("Email sent successfully:", result);
 
     return res.json({
       success: true,
@@ -76,6 +66,7 @@ exports.handleSendMessage = async (req, res) => {
     return res.status(500).json({
       success: false,
       message: "Failed to send email",
+      error: error.message,
     });
   }
 };
