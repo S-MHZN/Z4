@@ -12,9 +12,14 @@ exports.handleSendMessage = async (req, res) => {
       message,
     });
 
+    console.log("EMAIL_USER:", process.env.EMAIL_USER);
+    console.log("EMAIL_PASS:", process.env.EMAIL_PASS);
+    
     // 1. Create transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -30,29 +35,29 @@ exports.handleSendMessage = async (req, res) => {
       html: `
       <div style="font-family: Arial, sans-serif; background:#f4f4f4; padding:20px;">
         <div style="max-width:600px; margin:auto; background:#fff; padding:20px; border-radius:10px;">
-          
+
           <h2 style="color:#333;">📩 New Message Received</h2>
           <p>You got a new message from your portfolio website.</p>
-        
+
           <hr>
-        
+
           <p><strong>👤 Name:</strong> ${name}</p>
           <p><strong>📧 Email:</strong> ${email}</p>
           <p><strong>🏢 Company:</strong> ${company || "Not provided"}</p>
           <p><strong>🛠️ Service:</strong> ${service || "Not provided"}</p>
-        
+
           <hr>
-        
+
           <p><strong>💬 Message:</strong></p>
           <p style="background:#f9f9f9; padding:10px; border-radius:5px;">
             ${message}
           </p>
-        
+
           <br>
           <p style="font-size:12px; color:gray;">
             Sent from your contact form
           </p>
-        
+
         </div>
       </div>
       `,
